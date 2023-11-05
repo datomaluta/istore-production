@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import CloseIcon from "../icons/CloseIcon";
 import { useTranslation } from "react-i18next";
-import DownArrowIcon from "../icons/DownArrowIcon";
 import { motion } from "framer-motion";
-import useCategoryClicked from "../../hooks/useCategoryClicked";
 
 const MobileHeaderContent = (props: {
   mobileHeaderVisibilityHandler: () => void;
 }) => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <motion.div

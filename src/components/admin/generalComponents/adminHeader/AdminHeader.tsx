@@ -13,7 +13,7 @@ import usaFlag from "../../../../assets/images/usa.png";
 
 const AdminHeader = ({ setSidebarVisible }: PropsType) => {
   const [userDropDownVisible, setUserDropDownVisible] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const lngs = ["en", "ka"];
   return (

@@ -8,7 +8,7 @@ const initialState: themeType = {
   theme: "dark",
 };
 
-export const themeSlice = createSlice({
+export const themeSlice: any = createSlice({
   name: "theme",
   initialState,
   reducers: {

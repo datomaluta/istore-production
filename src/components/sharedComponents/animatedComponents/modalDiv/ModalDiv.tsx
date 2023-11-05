@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import CloseIcon from "../../../icons/CloseIcon";
 import { PropsType } from "./types";
 import { useTranslation } from "react-i18next";

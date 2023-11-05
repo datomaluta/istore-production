@@ -6,11 +6,8 @@ import { getCategoryAllProducts } from "../../services/categoryService";
 import { Product } from "../types/product";
 import ProductCard from "../components/sharedComponents/productCard/ProductCard";
 import { useQuery } from "@tanstack/react-query";
-import Loader from "../components/sharedComponents/Loader";
 import { useEffect, useState } from "react";
-import Pagination from "../components/sharedComponents/pagination/Pagination";
 import Layout from "../components/sharedComponents/layout/Layout";
-import { useSelect } from "@material-tailwind/react";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 
@@ -24,7 +21,7 @@ const Computers = () => {
     if (page) setCurrentPage(page);
   }, [page]);
 
-  const { isLoading, data: computersQuery } = useQuery({
+  const { isLoading } = useQuery({
     queryKey: ["computers", currentPage],
     queryFn: () => getCategoryAllProducts("computers", currentPage),
   });

@@ -1,5 +1,3 @@
-import { useTranslation } from "react-i18next";
-
 const Layout = (props: { children: JSX.Element | JSX.Element[] }) => {
   return (
     <div
