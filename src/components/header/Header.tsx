@@ -69,7 +69,7 @@ const Header = () => {
   }, [totalQuantity]);
 
   return (
-    <header className="absolute top-0 left-0 right-0 bg-primary w-full  text-white z-50 px-2">
+    <header className="absolute top-0 left-0 right-0 bg-primary w-full  text-white z-50 px-4">
       <AnimatePresence>
         {mobileHeaderIsVisible && (
           <MobileHeaderContent
