@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BurgerIcon from "../../../icons/BurgerIcon";
 import DownArrowIcon from "../../../icons/DownArrowIcon";
 import Theme from "../../../sharedComponents/Theme";
@@ -14,6 +14,7 @@ import usaFlag from "../../../../assets/images/usa.png";
 const AdminHeader = ({ setSidebarVisible }: PropsType) => {
   const [userDropDownVisible, setUserDropDownVisible] = useState(false);
   const { i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const lngs = ["en", "ka"];
   return (
@@ -76,9 +77,12 @@ const AdminHeader = ({ setSidebarVisible }: PropsType) => {
           </Link>
           <button
             className="flex gap-2 hover:text-tint border-t border-greyforBorder mt-3 pt-4 w-full"
-            onClick={() =>
-              localStorage.setItem("isLoggedIn", JSON.stringify(false))
-            }
+            onClick={() => {
+              {
+                localStorage.setItem("isLoggedIn", JSON.stringify(false));
+                navigate("/");
+              }
+            }}
           >
             <LogoutIcon />
             Log out
