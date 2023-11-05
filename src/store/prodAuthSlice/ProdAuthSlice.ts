@@ -32,8 +32,8 @@ export const prodAuthSlice: any = createSlice({
         (user: any) => user.email === payload.email
       );
       if (
-        userWhoTryingLogin.email === payload.email &&
-        userWhoTryingLogin.password === payload.password
+        userWhoTryingLogin?.email === payload.email &&
+        userWhoTryingLogin?.password === payload.password
       ) {
         localStorage.setItem("isLoggedIn", JSON.stringify(true));
         state.loginError = false;

@@ -52,8 +52,6 @@ const Header = () => {
   const storedData = localStorage.getItem("isLoggedIn");
   const isLoggedIn = storedData ? JSON.parse(storedData) : false;
 
-  console.log(isLoggedIn);
-
   const { totalQuantity } = useSelector((state: RootState) => state.cart);
 
   const { register, handleSubmit } = useForm();

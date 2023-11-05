@@ -42,22 +42,13 @@ const DiscountSlider = () => {
     ],
   };
 
-  const { isLoading } = useQuery({
-    queryKey: ["computers"],
-    queryFn: () => getCategoryAllProducts("computers", 1),
-  });
-
   const { productList } = useSelector((state: RootState) => state.dummy);
 
   return (
     <Slider className="w-[97%] sm:w-[92%] mx-auto " {...settings}>
-      {isLoading ? (
-        <LoaderDots />
-      ) : (
-        productList.map((product: Product) => (
-          <DiscountSlide key={product.id} product={product} />
-        ))
-      )}
+      {productList.map((product: Product) => (
+        <DiscountSlide key={product.id} product={product} />
+      ))}
     </Slider>
   );
 };
