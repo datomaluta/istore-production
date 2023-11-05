@@ -1,9 +1,6 @@
 import Slider from "react-slick";
 import DiscountSlide from "./DiscountSlide";
-import { useQuery } from "@tanstack/react-query";
-import { getCategoryAllProducts } from "../../../../services/categoryService";
 import { Product } from "../../../types/product";
-import LoaderDots from "../../sharedComponents/LoaderDots";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
 
