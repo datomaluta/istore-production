@@ -74,7 +74,12 @@ const AdminHeader = ({ setSidebarVisible }: PropsType) => {
             <ProfileIcon />
             My profile
           </Link>
-          <button className="flex gap-2 hover:text-tint border-t border-greyforBorder mt-3 pt-4 w-full">
+          <button
+            className="flex gap-2 hover:text-tint border-t border-greyforBorder mt-3 pt-4 w-full"
+            onClick={() =>
+              localStorage.setItem("isLoggedIn", JSON.stringify(false))
+            }
+          >
             <LogoutIcon />
             Log out
           </button>
