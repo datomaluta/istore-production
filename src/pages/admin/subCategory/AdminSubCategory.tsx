@@ -77,7 +77,6 @@ const AdminSubCategory = () => {
   }, []);
 
   const { productList } = useSelector((state: RootState) => state.dummy);
-  console.log(productList);
 
   return (
     <AdminLayout>

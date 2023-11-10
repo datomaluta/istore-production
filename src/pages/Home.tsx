@@ -6,9 +6,10 @@ import Features from "../components/homeComponents/features/Features";
 import TestimonialLayout from "../components/homeComponents/testimonial/TestimonialLayour";
 import { motion } from "framer-motion";
 import Layout from "../components/sharedComponents/layout/Layout";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  // const visible = { opacity: 1, y: 0, transition: { duration: 0.5 } };
+  const { t } = useTranslation();
 
   return (
     <Layout>
@@ -24,7 +25,7 @@ const Home = () => {
         <Features />
         <div className="mt-20 flex justify-center flex-col items-center">
           <h1 className="text-lg text-center mb-8 max-w-max border-b-2 border-primary pb-1">
-            დღის შეთავაზებები
+            {t("offers")}
           </h1>
           <DiscountSlider />
         </div>
